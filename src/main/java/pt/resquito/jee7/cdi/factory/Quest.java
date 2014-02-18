@@ -1,4 +1,4 @@
-package pt.resquito.jee7.factory;
+package pt.resquito.jee7.cdi.factory;
 
 /**
  * Created by resquito on 17-02-2014.

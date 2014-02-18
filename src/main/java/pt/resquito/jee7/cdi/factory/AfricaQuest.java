@@ -1,4 +1,4 @@
-package pt.resquito.jee7.factory;
+package pt.resquito.jee7.cdi.factory;
 
 import javax.ejb.Stateless;
 
@@ -6,10 +6,10 @@ import javax.ejb.Stateless;
  * Created by resquito on 17-02-2014.
  */
 @Stateless
-public class EuropeQuest implements Quest {
+public class AfricaQuest implements Quest {
 
     @Override
     public String startQuest() {
-        return "Start Europe Quest!";
+        return "Start African Quest!";
     }
 }

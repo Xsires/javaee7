@@ -1,4 +1,4 @@
-package pt.resquito.jee7.factory;
+package pt.resquito.jee7.cdi.factory;
 
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.junit.Arquillian;
@@ -7,6 +7,7 @@ import org.jboss.shrinkwrap.api.asset.EmptyAsset;
 import org.jboss.shrinkwrap.api.spec.JavaArchive;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import pt.resquito.jee7.cdi.factory.*;
 
 import javax.inject.Inject;
 
@@ -27,7 +28,7 @@ public class QuestFactoryTest {
     }
 
     @Inject
-    @QuestType("Europa")
+    @QuestType
     private Quest europaQuest;
 
     @Inject

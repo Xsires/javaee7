@@ -1,4 +1,4 @@
-package pt.resquito.jee7.factory;
+package pt.resquito.jee7.cdi.factory;
 
 import javax.inject.Qualifier;
 import java.lang.annotation.ElementType;
@@ -12,9 +12,9 @@ import java.lang.annotation.Target;
 
 @Qualifier
 @Retention(RetentionPolicy.RUNTIME)
-@Target({ElementType.TYPE, ElementType.METHOD, ElementType.FIELD, ElementType.PARAMETER})
+@Target({ElementType.TYPE, ElementType.METHOD, ElementType.FIELD})
 public @interface QuestType {
 
-    String value();
+    String value() default "Europa";
 
 }

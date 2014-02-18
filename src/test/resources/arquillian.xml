@@ -4,7 +4,7 @@
 
     <defaultProtocol type="Servlet 3.0"/>
 
-    <container qualifier="test" default="true">
+    <container qualifier="test" default="true" >
         <configuration>
             <property name="username">arquillian</property>
             <property name="password">arquillian</property>
