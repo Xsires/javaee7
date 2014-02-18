@@ -7,15 +7,15 @@ import javax.enterprise.inject.Produces;
  */
 public class QuestFactory {
 
+
+    private String type;
+
     @Produces
-    @EuropaQuest
     public Quest getEuropaQuest() {
+        if("Africa".equals(type))
+            return new AfricaQuest();
+
         return new EuropeQuest();
     }
 
-    @Produces
-    @AfricanaQuest
-    public Quest getAfricaQuest() {
-        return new EuropeQuest();
-    }
 }

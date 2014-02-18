@@ -9,7 +9,7 @@ import javax.ejb.Stateless;
 public class AfricaQuest implements Quest {
 
     @Override
-    public void startQuest() {
-        System.out.println("Start African Quest!");
+    public String startQuest() {
+        return "Start African Quest!";
     }
 }

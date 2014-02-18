@@ -10,6 +10,8 @@ import org.junit.runner.RunWith;
 
 import javax.inject.Inject;
 
+import static org.junit.Assert.assertEquals;
+
 /**
  * Created by resquito on 17-02-2014.
  */
@@ -18,28 +20,28 @@ public class QuestFactoryTest {
     @Deployment
     public static JavaArchive createDeployment() {
         JavaArchive jar = ShrinkWrap.create(JavaArchive.class)
-                .addClasses(EuropaQuest.class, AfricanaQuest.class, Quest.class, QuestFactory.class, EuropeQuest.class, AfricaQuest.class)
+                .addClasses(QuestType.class, Quest.class, QuestFactory.class, EuropeQuest.class, AfricaQuest.class)
                 .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
         System.out.println(jar.toString(true));
         return jar;
     }
 
     @Inject
-    @EuropaQuest
+    @QuestType("Europa")
     private Quest europaQuest;
 
     @Inject
-    @AfricanaQuest
+    @QuestType("Africa")
     private Quest africaQuest;
 
 
     @Test
     public void testEuropaQuest() {
-        europaQuest.startQuest();;
+        assertEquals("Start Europe Quest!", europaQuest.startQuest());
     }
 
     @Test
     public void testAfricaQuest() {
-        africaQuest.startQuest();;
+        assertEquals( "Start African Quest!",africaQuest.startQuest());
     }
 }

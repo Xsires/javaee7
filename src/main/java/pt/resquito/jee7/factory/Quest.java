@@ -5,5 +5,5 @@ package pt.resquito.jee7.factory;
  */
 public interface Quest {
 
-    public void startQuest();
+    public String startQuest();
 }
