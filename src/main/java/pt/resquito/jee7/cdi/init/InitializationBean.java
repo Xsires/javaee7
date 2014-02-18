@@ -15,12 +15,12 @@ public class InitializationBean {
 
     @PostConstruct
     public void initialize() {
-        log.info("initializing...");
+        System.out.println("initializing...");
     }
 
     @PreDestroy
     public void destroy() {
-        log.info("destroying...");
+        System.out.println("destroying...");
     }
 
 }
