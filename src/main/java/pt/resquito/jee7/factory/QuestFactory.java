@@ -11,11 +11,15 @@ public class QuestFactory {
     private String type;
 
     @Produces
+    @QuestType("Europa")
     public Quest getEuropaQuest() {
-        if("Africa".equals(type))
-            return new AfricaQuest();
-
         return new EuropeQuest();
+    }
+
+    @Produces
+    @QuestType("Africa")
+    public Quest getAfricaQuest() {
+        return new AfricaQuest();
     }
 
 }

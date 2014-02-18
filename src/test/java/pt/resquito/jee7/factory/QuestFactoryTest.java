@@ -27,7 +27,7 @@ public class QuestFactoryTest {
     }
 
     @Inject
-    @QuestType("Europa")
+    @QuestType
     private Quest europaQuest;
 
     @Inject
